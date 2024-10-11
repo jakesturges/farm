@@ -1,0 +1,343 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+
+/*-------------------- CSS REST ---------------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --Green: #06A816;
+    --Orange: #E75D02;
+    --Black: #000000;
+    --White: #ffffff;
+    --text-font: 'Habibi';
+    --heading-font: 'Irish Grover';
+    --h1-size: 2.5em;
+    --h2-size: 1.75em;
+    --h3-size: 1.25em;
+    --text-size: 1.25em;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+header {
+    text-align: center;
+    background-color: var(--Green);
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+h1 {
+    font-family:  var(--heading-font);
+    font-size: var(--h1-size);
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
+    color: var(--White);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-family: var(--heading-font);
+    font-size: var(--h3-size);
+}
+
+header p {
+    color: var(--White);
+    font-style:italic;
+}
+
+p {
+    font-family: var(--text-font);
+    font-size: 1em;
+    line-height: 1.25;
+}
+
+nav {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    width: 250px;
+}
+
+nav ul li a{
+    display: block;
+    background-color: var(--Orange);
+    color: var(--White);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: var(--text-size);
+    font-family: var(--text-font)
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header h2 {
+    align-self: flex-start;
+    margin: 0 7px 10px 7px;
+}
+
+.section-header p{
+    margin: 0 10px 20px 10px;
+    text-align: left;
+}
+
+.main-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.item-flex-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 30px;
+}
+
+#fruits {
+    margin-bottom: 100px;
+}
+
+#vegtables {
+    margin-bottom: 50px;
+}
+
+#company-info {
+    background-color: var(--Green);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    height: auto;
+}
+
+#contact-div, #hours-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#contact-div {
+    margin-top: 30px;
+}
+
+#hours-div {
+    margin-bottom: 15px;
+}
+
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    background-color: var(--Orange);
+    color: var(--White);
+    border: none;
+    padding: 8px 10px;
+    font-size: var(--text-size);
+    font-family: var(--text-font);
+    cursor: pointer;
+    border: 1px solid var(--White);
+}
+
+footer {
+    text-align: center;
+    color: var(--Green);
+    font-size: 1em;
+    padding: 10px;
+}
+
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 834px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        margin: 0 0 0 10px;
+    }
+
+    header p {
+        margin: 0 10px 0 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 150px;
+    }
+
+    .item-flex-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #company-info {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+   }
+
+    #contact-div, #hours-div {
+        height: 100%;
+        margin-top: 20px;
+    }
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1280px) {
+    .header-nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--Green);
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav ul {
+        gap: 30px;
+        margin-right: 10px;
+    }
+
+    nav ul li {
+        border: 1px solid var(--White);
+    }
+
+    #fruits {
+        margin-top: 30px;
+    }
+
+    .item-flex-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #company-info {
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    #contact-div, #hours-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    #company-info h2 {
+        margin-top: 20px;
+    }
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1440px) {
+    .item-flex-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+
